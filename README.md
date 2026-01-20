@@ -68,8 +68,8 @@ Broker aktivieren und starten:
 sudo systemctl enable mosquitto
 sudo systemctl start mosquitto 
 ```
-Offizielle Dokumentation: https://mosquitto.org/documentation/
-Hilfe bei der Installation von MQTT: https://randomnerdtutorials.com/how-to-install-mosquitto-broker-on-raspberry-pi/
+- Offizielle Dokumentation: https://mosquitto.org/documentation/
+- Hilfe bei der Installation von MQTT: https://randomnerdtutorials.com/how-to-install-mosquitto-broker-on-raspberry-pi/
 
 ---
 
