@@ -56,9 +56,7 @@ Installation der Python-Abhängigkeiten:
 pip3 install paho-mqtt numpy scipy matplotlib 
 ```
 
-Auf dem Raspberry Pi **muss ein MQTT-Broker installiert und aktiv sein**, da der ESP32 seine Sensordaten dorthin sendet. Empfohlen wird "Mosquitto".
-
-Installation: 
+Auf dem Raspberry Pi **muss ein MQTT-Broker installiert und aktiv sein**, da der ESP32 seine Sensordaten dorthin sendet. Empfohlen wird "Mosquitto":
 ```bash
 sudo apt update
 sudo apt install mosquitto mosquitto-clients
