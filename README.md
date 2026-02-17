@@ -56,7 +56,7 @@ Installation der Python-Abhängigkeiten:
 pip3 install paho-mqtt numpy scipy matplotlib 
 ```
 
-In esp_client/ muss außerdem eine Datei "secrets.h" angelegt werden, die folgende Makros enthält: "SSID" (WLAN-SSID), PASSWORD (WLAN-Passwort), MQTT_IP (IP des MQTT-Brokers).
+In `esp_client/` muss außerdem eine Datei `secrets.h` angelegt werden, die folgende Makros enthält: `SSID` (WLAN-SSID), `PASSWORD` (WLAN-Passwort) und `MQTT_IP` (IP des MQTT-Brokers).
 
 Auf dem Raspberry Pi **muss ein MQTT-Broker installiert und aktiv sein**, da der ESP32 seine Sensordaten dorthin sendet.
 
