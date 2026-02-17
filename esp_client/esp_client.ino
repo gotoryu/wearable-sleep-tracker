@@ -4,11 +4,9 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
+#include "secrets.h"
 
 //WiFi Connection Variables
-const char* ssid = "devolo-d13"; //WiFi SSID
-const char* password = "..."; //WiFi Password
-const char* mqtt_server = "192.168.1.56"; //MQTT Broker IP
 WiFiClient espClient;
 PubSubClient client(espClient);
 long lastMsg = 0;
@@ -43,9 +41,9 @@ void setup_wifi() {
   delay(50);
   Serial.println();
   Serial.print("Connecting to ");
-  Serial.println(ssid);
+  Serial.println(SSID);
 
-  WiFi.begin(ssid, password);
+  WiFi.begin(SSID, PASSWORD);
 
   int c=0;
   while (WiFi.status() != WL_CONNECTED) {
@@ -148,8 +146,8 @@ void setup(void) {
 
   // setup WiFi Connection to MQTT Broker
   setup_wifi();
-  // 1883 default MQTT-port, mqtt_server contains server IP
-  client.setServer(mqtt_server,1883);
+  // 1883 is default MQTT-port
+  client.setServer(MQTT_IP, 1883);
   client.setCallback(callback);
 
   delay(100);
