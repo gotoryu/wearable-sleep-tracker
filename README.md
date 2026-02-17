@@ -56,8 +56,6 @@ Installation der Python-Abhängigkeiten:
 pip3 install paho-mqtt numpy scipy matplotlib 
 ```
 
-In `esp_client/` muss außerdem eine Datei `secrets.h` angelegt werden, die folgende Makros enthält: `SSID` (WLAN-SSID), `PASSWORD` (WLAN-Passwort) und `MQTT_IP` (IP des MQTT-Brokers).
-
 Auf dem Raspberry Pi **muss ein MQTT-Broker installiert und aktiv sein**, da der ESP32 seine Sensordaten dorthin sendet.
 
 ### Empfohlener Broker: Mosquitto Installation: 
@@ -72,6 +70,8 @@ sudo systemctl start mosquitto
 ```
 - Offizielle Dokumentation: https://mosquitto.org/documentation/
 - Hilfe bei der Installation von MQTT: https://randomnerdtutorials.com/how-to-install-mosquitto-broker-on-raspberry-pi/
+
+In `esp_client/` muss anschließend eine Datei `secrets.h` angelegt werden, die folgende Makros enthält: `SSID` (WLAN-SSID), `PASSWORD` (WLAN-Passwort) und `MQTT_IP` (IP des MQTT-Brokers).
 
 ---
 
